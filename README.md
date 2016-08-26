@@ -1,3 +1,6 @@
-# Medios audiovisuales en la web
+# Media on the web
 
-Material de la asignatura "Medios audiovisuales en la web". CENTRO.
+Material for the subject "Media on the web".
+
+Fall 2016.
+CENTRO.
