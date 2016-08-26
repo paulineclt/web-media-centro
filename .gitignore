@@ -1,2 +1,2 @@
-lectures/*
-!lectures/lecture1.pdf
+node_modules/
+.DS_Store
