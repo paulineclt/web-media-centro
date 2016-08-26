@@ -5,7 +5,7 @@ In this document will be added the references (technical and content) made in cl
 If you want to add a reference, please open an issue and I will added in the
 Student Section.
 
-## Lecture 1
+## Chapter 1
 1. [ Terminal command cheat sheet ](http://learntocodewith.me/command-line/unix-command-cheat-sheet/)
 2. [ Git command cheat sheet ](https://www.git-tower.com/blog/git-cheat-sheet/)
 3. [ SublimeText ](https://www.sublimetext.com/)
