@@ -39,71 +39,398 @@
           <section>
             <h2>2.1 OSI Layer Model</h2>
             <p>
-              At the beginning of the computer networks (1980's) all companies had
-              different ways to communicate their computers.<br>
-              As the network become bigger and bigger, the world realized how serious
-              will be the incompatibility.
+              Suppose we dinner tonight with the England Queen. "Wait until the
+              queen extends her hand to take it", they indicate us, "It's the 
+              social protocol".<br>
+              <img width="500" data-src="img/queen.jpg">
             </p>
           </section>
 
           <section>
+            <h3>Network Protocols</h3>
             <p>
-              Then, the concept of network protocol was born.<br>
-              A network protocol is a list of rules that allow two or more computers
-              transmit information.<br>
-              These rules defines the syntax, semantics and synchronization of
-              the information and possible error recovery methods.
+              Social protocols are rules that enable individuals and communities
+              to express social capabilities like discuss important things with
+              the English royalty.
+              <br><br>
+              In computer networks are a very similar concept.
             </p>
           </section>
 
           <section>
+            <h3>Network Protocols</h3>
+            <p>
+              For example, suppose we are designing a very simple room chat.
+              We establish that for each message the data must be
+              separated with semicolon (;) and structured as follows:<br>
+              <small><code>receiver;"message";priority</code></small><br><br>
+              If anyone send the data: <br>
+              <small><code>Tania;"Hello dear",HIGH</code></small><br>
+              our chat does not know who deliver it.
+            </p>
+          </section>
+
+          <section>
+            <h3>Network Protocols</h3>
+            <p>
+              At the beginning of the computer networks (1980's) all companies defined
+              different ways to communicate their computers.<br>
+              As the network become bigger and bigger, the world realized how
+              serious will be the incompatibility, and then, the concept of network
+              protocol was born.
+            </p>
+          </section>
+
+          <section>
+            <h3>Network Protocols</h3>
+            <p>
+              A network protocol is a list of rules that indicates how two or more computers
+              must transmit information.<br>
+              These rules enable one computer to understand messages sent from
+              another and then act on those messages, defining: syntax and semantics.<br>
+              <img width="400" data-src="img/protocol.GIF"><br>
+              <small>http://www.library.louisville.edu/tilt/glossary/protocol2.htm</small>
+            </p>
+          </section>
+
+          <section>
+            <h3>OSI Layers</h3>
             <p>
               The OSI (Open System Interconnection) Model is the standard conceptual model
               of the today computer communications.<br>
-              This model partitions a communication in abstract layers.<br>
-              Each layer have different network protocols.
+              This model break down the network data in layers. In each layer have
+              different network protocols.<br>
+              So we have different protocols for each layer.
             </p>
           </section>
 
           <section>
-            <img width="600" data-src="img/osi.gif">
+            <h3>OSI Layers</h3>
+            <img width="700" data-src="img/osi.jpg">
+          </section>
+
+          <section>
+            <h3>OSI Layers</h3>
+            <p>
+              <ul>
+                <li><b>Physical Layer.</b> Transmit bits (0, 1) without any structure
+                through a physical media. <i>Protocols: Ethernet, WiFi, Optical Fiber, etc</i></li><br>
+                <li><b>Data Link Layer.</b> Binary data form packages called frames. This layer
+                controls the flow and delimits the frames. <i>Protocols: MAC, LLC</i></li><br>
+                <li><b>Network Layer.</b> Routes the message, and encode into frames.
+                <i>Protocols: IP</i></li><br>
+                <li><b>Transport Layer.</b> Stablish point-to-point connections between
+                two different computer processes. Concept of port is introduces.
+                <i>Protocols: TCP, UDP</i></li><br>
+                <li><b>Session Layer.</b> Put rules about sessions if are necessary.</li><br>
+                <li><b>Presentation Layer.</b> Handle data compression and data encode.</li><br>
+                <li><b>Application Layer.</b> Entry point for all the network services. Acts
+                like a window for user purposes: transfer files <i>(FTP)</i>, send mails <i>(SMTP)</i>,
+                transmitir datos web <i>(HTTP)</i>.
+                </li>
+              </ul>
+            </p>
           </section>
         </section>
 
         <section>
-          <h2>2.2 TCP / UDP Protocol</h2>
-          <p>
-          </p>
+          <section>
+            <h2>2.2 TCP / UDP Protocol</h2>
+            <p>
+              Of all of previous protocols, these are two that you must should know.<br>
+              Both are included in the Transport Layer and have the concept of port.
+            </p>
+          </section>
+
+          <section>
+            <h3>Main differences</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>TCP</th>
+                  <th>UDP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>It is a connection-oriented protocol.</td>
+                  <td>It is a message-oriented protocol.</td>
+                </tr>
+                <tr>
+                  <td>Bidirectional</td>
+                  <td>Unidirectional</td>
+                </tr>
+                <tr>
+                  <td>Based on sockets</td>
+                  <td>Based on datagrams</td>
+                </tr>
+                <tr>
+                  <td>Reliable (always receives)</td>
+                  <td>Unreliable</td>
+                </tr>
+                <tr>
+                  <td>Guaranteed order</td>
+                  <td>Packages could be delivered in different order than send.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </section>
 
         <section>
-          <h2>2.3 HTTP Protocol</h2>
-          <p>
-          </p>
+          <section>
+            <h2>2.3 HTTP Protocol</h2>
+            <p>
+              HTTP stands for HyperText Transfer Protocol. It's an application
+              layer protocol, and is the FOUNDATION OF THE MODERN WEB.<br>
+              As a web developer, we all must have a strong understanding of
+              this protocol.
+            </p>
+          </section>
+
+          <section>
+            <h3>HTTP</h3>
+            <p>
+              <ul>
+                <li>HTTP it is based on a host-client architecture.</li><br>
+                <li> All communication between a host and a client occurs, via
+                a <u><b>request/response pair.</b></u></li><br>
+                <li>Is a stateless protocol.</li><br>
+                <li>Uses TCP/IP protocols and the default port is 80.</li><br>
+                <li>The current version of the protocol is HTTP/1.1.</li><br>
+                <li>Has a security version: HTTPS</li><br>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h3>Requests</h3>
+            <p>
+              The communication in HTTP <b>always begin</b> in the client side with a
+              HTTP request message, which is serviced through a HTTP response message
+              in return for the host.<br>
+              A host is called a server in that sense.
+            </p>
+            <img width="600" data-src="img/http1.png">
+          </section>
+
+          <section>
+            <h3>Requests - URL</h3>
+            <p>
+              A HTTP request message have two parts: an URL and a HTTP verb.<br><br>
+              The URL (Uniform Resource Locator) tells from who and what resource the client
+              its wanting.<br>
+              <img width="700" src="img/http1-url.png">
+            </p>
+          </section>
+
+          <section>
+            <h3>Requests - verbs</h3>
+            <p>
+              HTTP verbs indicate to the host the action that should be performed with
+              the resource specified in the URL. The basic HTTP verbs are:
+              <ol>
+                <li><b><code>GET</code>.</b> Fetch an existing resource.</li><br>
+                <li><b><code>POST</code>.</b> Create a new resource, extra payload usually
+                specifies the data.</li><br>
+                <li><b><code>PUT</code>.</b> Update an existing resource. The payload may
+                contain the updated data for the resource.</li><br>
+                <li><b><code>DELETE</code>.</b> Delete an existing resource.</li><br>
+              </ol>
+              <code>PUT</code> and <code>DELETE</code> are sometimes considered
+              specialized versions of the <code>POST</code> verb.
+            </p>
+          </section>
+
+          <section>
+            <h3>Responses</h3>
+            <p>
+              Once the send the HTTP request, the host (server) process the request
+              and send the response.<br>
+              A response message from the server has two parts: the status code
+              and the payload message.<br>
+              The HTTP spec defines certain number ranges for the status codes:<br>
+              <ul>
+                <li><b>2xx Successful. </b>This tells the client that the request
+                was successfully processed. The most common code is 200 OK.</li><br>
+                <li><b>3xx Redirection.</b>This requires the client to take additional action.</li><br>
+                <li><b>4xx Client Error.</b>These codes are used when the server thinks
+                that the client is at fault. The most popular code in this class is
+                404 Not Found.</li><br>
+                <li><b>5xx Server Error</b> This class of codes are used to indicate a
+                server failure while processing the request. The most commonly
+                error code is 500 Internal Server Error.</li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h3>Responses</h3>
+            <img width="300" data-src="img/404-1.jpg">
+            <img width="395" data-src="img/404-2.jpg">
+          </section>
+
+          <section>
+            <h3>Summary</h3><br>
+            <img width="600" src="img/http1-req-res.png">
+          </section>
         </section>
 
         <section>
-          <h2>2.4 HTML</h2>
-          <p>
-          </p>
+          <section>
+            <h2>2.4 HTML</h2>
+            <p>
+              With CSS and JavaScript it forms a triad of cornerstone technologies
+              for the WorldWideWeb.
+            </p>
+          </section>
+
+          <section>
+            <h3>Anatomy of a website</h3>
+            <p>
+              HTML (structure) + CSS (style) + JavaScript (logic and behaviour)<br>
+              <img data-src="img/html.gif">
+            </p>
+          </section>
+
+          <section>
+            <h3>HTML</h3>
+            <p>
+              HTML is the most elemental building block to program any web site.<br>
+              All web sites that you can see through a web browser is written with
+              HTML.<br><br>
+              It was created at the starts of 1990's by Tim Berners Lee, and currently
+              mantained by the W3C.<br>
+              <img width="300" data-src="img/tim.jpg">
+            </p>
+          </section>
+
+          <section>
+            <h3>HTML</h3>
+            <p>
+              HTML stands for HyperText Markup Language.<br>
+              It means that is a language made of <u>hypertext</u> and
+              <u>marks</u>. Both are used to indicates a browser the structure
+              of a web page.<br><br>
+              HTML only gives structure (like the bones) to the web page, not
+              style, nor logic or behaviour.
+            </p>
+          </section>
+
+          <section>
+            <h3>Hypertext</h3>
+            <p>
+              The Hypertext allow embed external items (fonts, style, images,
+              video, scripts) indirectly through a reference of each item.
+              It is responsability of the render get the items with an extra effort
+              and combine all stuff to get the final view.<br>
+            </p>
+          </section>
+
+          <section>
+            <h3>Tags and elements</h3>
+            <p>
+              HTML documents has a structure of nested HTML elements (hypertexted
+              content).<br>
+              These are indicated in the document by marks, hereinafter referred
+              to as tags.<br><br>
+              A <u>tag</u> is a code element (text) enclosed by angle brackets: <code>< ></code>.<br>
+              Generally comes in pairs: "open tag" and "close tag", like: <xmp><h1></h1></xmp><br>
+
+              An HTML element has two properties: attributes and content.<br>
+              <xmp><tag attribute1="value1" attribute2="value2">content</tag></xmp><br>              
+            </p>
+          </section>
+
+          <section>
+            <h3>Hierarchy</h3>
+            <p>
+              There are tags that may enclose no content, like <code>&lt;img&gt;</code>.<br>
+              The tags that enclose content defines a hierarchy, where the outside tag
+              has more hierarchy than the deeper.<br><br>
+              When the renderer, parse the HTML document text, create an object in memory
+              called Document Object Model (DOM).<br>
+              <img width="400" data-src="img/dom.gif">
+            </p>
+          </section>
         </section>
 
         <section>
-          <h2>2.5 CSS</h2>
-          <p>
-          </p>
-        </section>
+          <section>
+            <h2>2.5 CSS</h2>
+            <p>
+              The Cascading Style Sheets (CSS) are files used for give the style
+              to a website.
+            </p>
+          </section>
 
-        <section>
-          <h2>2.6 Javascript</h2>
-          <p>
-          </p>
-        </section>
+          <section>
+            <h3>Anatomy of a website</h3>
+            <p>
+              HTML (structure) + CSS (style) + JavaScript (logic and behaviour)<br>
+              <img data-src="img/html.gif">
+            </p>
+          </section>
 
-        <section>
-          <h2>2.7 Client and server architecture</h2>
-          <p>
-          </p>
+          <section>
+            <h3>Style Sheets</h3>
+            <p>
+              A style sheet consists of "style rules".<br><br>
+              Each style rule consistsof a "selector" and "declarations" of
+              property-value pairs:
+              <pre><code class="hljs">
+                selector {
+                  property: value;
+                  property: value;
+                }
+              </code></pre>
+              <pre><code class="hljs">
+                body {
+                  color: yellow;
+                  background-color: black;
+                }
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h3>CSS in HTML</h3>
+            <p>
+              There are three main ways to add CSS to an HTML:
+              <ol>
+                <li>Style tag.</li><br>
+                <li>Link tag.</li><br>
+                <li>Inline styles (apply directly - VERY NASTY).</li><br>
+              </ol>
+            </p>
+          </section>
+
+          <section>
+            <h3>Selector</h3>
+            <p>
+              The selector is used to select which elements in the HTML page
+              will be given the styles inside the curly braces.<br><br>
+              Types:<br>
+              <ol>
+                <li>By element (<code>img, div, body</code>)</li><br>
+                <li>By id (<code>#</code>)</li><br>
+                <li>By class (<code>.</code>)</li><br>
+                <li>By property (<code>div[name="value"]</code>)</li><br>
+              </ol>
+            </p>
+          </section>
+
+          <section>
+            <h3>Naming conventions</h3>
+            <p>
+              Some rules to follow when making IDs and class names:<br>
+              <ol>
+                <li>Describe the content, not the presentation ("warning", not "redbox").</li><br>
+                <li>Use all lowercase, and hyphens when needed for readability ("header-info", not "headerInfo").</li><br>
+                <li>Use hyphens to show that a class or ID is part of something else. (e.g. "footer", "footer-copyright", and "footer-logo").</li><br>
+              </ol>
+            </p>
+          </section>
         </section>
       </div>
     </div>
