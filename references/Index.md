@@ -38,3 +38,8 @@ graphic programs made with OpenGL) through WebGL.
 3. [ How Web Servers Work ](http://computer.howstuffworks.com/web-server.htm)
 4. [ HTTP status cats ](http://www.damncoolpictures.com/2011/12/http-status-cats-http-status-codes.html)
 5. [ CSS Zen Garden ](http://www.csszengarden.com/)
+
+## Chapter 3
+1. [ Javascript Variables ](http://archive.oreilly.com/pub/a/javascript/excerpts/learning-javascript/javascript-datatypes-variables.html)
+2. [ Control Flow Javascript ](http://eloquentjavascript.net/1st_edition/chapter2.html)
+3. [ JS Array references ](http://www.w3schools.com/jsref/jsref_obj_array.asp)
