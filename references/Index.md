@@ -35,3 +35,6 @@ graphic programs made with OpenGL) through WebGL.
 ## Chapter 2
 1. [ Introduction to OSI Model ](https://www.techopedia.com/2/27094/networks/an-introduction-to-the-osi-model)
 2. [ HTTP: The Protocol Every Web Developer Must Know ](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+3. [ How Web Servers Work ](http://computer.howstuffworks.com/web-server.htm)
+4. [ HTTP status cats ](http://www.damncoolpictures.com/2011/12/http-status-cats-http-status-codes.html)
+5. [ CSS Zen Garden ](http://www.csszengarden.com/)
