@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Audiovisual media on the web | Chapter 3</title>
+
+    <meta name="description" content="Material de apoyo para la asignatura de Medios audiovisuales en la web.">
+    <meta name="author" content="Diego Montesinos">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>3. JavaScript</h3>
+          <img width="650" data-src="img/js.jpg">
+          <p>
+            <small>CENTRO | 2016</small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.1 What is programming?</h2>
+            <p>
+              Simple, programming is write algorithms in a programming language.
+            </p>
+          </section>
+
+          <section>
+            <h2>Algorithms</h2>
+            <p>
+              A list of ordered steps whose purpose is do something, and must be
+              understandable for those who will do (run).
+            </p>
+          </section>
+
+          <section>
+            <h2>Algorithms</h2>
+            <img data-src="img/recipe.jpg">
+          </section>
+
+          <section>
+            <h2>Algorithms</h2>
+            <img data-src="img/algo.jpg">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.2 Programming Languages</h2>
+            <p>
+              A programming language is an artificial language (with syntax
+              and semantic) designed to communicate algorithms to a machine.
+            </p>
+          </section>
+
+          <section>
+            <h2>Abstract Levels</h2>
+            <img data-src="img/level-language.gif">
+          </section>
+
+          <section>
+            <h2>Abstract Levels</h2>
+            <img data-src="img/large.png">
+          </section>
+          
+          <section>
+            <h2>Abstract Levels</h2>
+            <img data-src="img/binary.gif">
+          </section>
+
+          <section>
+            <h2>Compiled vs. Interpreted</h2>
+            <p>
+              Since the computer only "speak" machine code, we need to get a way
+              to translate top level programming language into low level machine code.
+              <br>
+              There are two ways:
+              <ul>
+                <li><b>Compile</b>. It translate <i>source code</i> into <i>machine code</i> through
+                another program (compiler). The result is called <i>object code</i> or simply
+                <i>binary</i></li>
+                <br>
+                <li><b>Interpret</b>. Use another program (interpreter) that directly executes, i.e. performs,
+                the code of the <i>source code</i> without previously compiling it.
+                </li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Compiled vs. Interpreted</h2>
+            <img data-src="img/comp.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.3 Javascript: the programming language of the web</h2>
+            <img data-src="img/jsweb.png">
+          </section>
+
+          <section>
+            <h3>Javascript: the programming language of the web</h3>
+            <p>
+              Javascript is an interpreted language, and its commonly abbreviated 
+              JS.<br>
+              Each browser has its own Javascript interpreter, also called engine.<br><br>
+              Programs writed in Javascript are called scripts.
+            </p>
+          </section>
+
+          <section>
+            <h2>History</h2>
+            <ul>
+              <li>1995: At Netscape, Brendan Eich created "JavaScript".</li><br>
+              <li>1996: Microsoft releases "JScript", a port for IE3.</li><br>
+              <li>1997: JavaScript was standardized in the "ECMAScript" spec.</li><br>
+              <li>2005: "AJAX" was coined and the web 2.0 age begins.</li><br>
+              <li>2010: Node.JS was released.</li><br>
+              <li>2015: ECMAScript 6 was released.</li><br>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Anatomy of a website</h3>
+            <p>
+              HTML (structure) + CSS (style) + JavaScript (logic and behaviour)<br>
+              <img data-src="img/html.gif">
+            </p>
+          </section>
+
+          <section>
+            <h3>Executing JavaScript</h3>
+            <p>
+              To include JavaScript code in a web page it used the
+              <code>&lt;script&gt;</code> HTML tag.
+              <pre><code class="hljs">
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    ...
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    ...
+                    <script>
+                      // Your JavaScript code begins here
+                      console.log('Hello World!');
+                    </script>
+                  &lt;/body&gt;
+                &lt;/html&gt;
+              </code></pre>
+            </p>
+            The script tag can goes into any place of <code>head</code> or
+            <code>body</code> tags, and multiple scripts are allowed.
+          </section>
+
+          <section>
+            <h3>Executing JavaScript</h3>
+            <p>
+              In order to get a better organization of our projects, the
+              JS scripts can be written in separated files and reference them with
+              the <code>src</code> attribute.
+              <pre><code class="hljs">
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    ...
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    ...
+                    <script src="path/to/jsScript1.js"></script>
+                    <script src="path/to/jsScript2.js"></script>
+                    <script src="path/to/jsScript3.js"></script>
+                  &lt;/body&gt;
+                &lt;/html&gt;
+              </code></pre>
+              The suffix <code>*.js</code> is the extension for the JS script files.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.4 JS: Variables</h2>
+            <img width="550" data-src="img/postits.jpg">
+          </section>
+
+          <section>
+            <h2>What is a variable?</h2>
+            <p>
+              We need store data: score in a game, telephone in a contact book, etc.<br><br>
+              A variable is a named value (or a value with meaning), that represent data.<br>
+              The value of a variable can change, but its meaning cannot.<br><br>
+              Also, the variables can be seen as value containers.<br>
+              <img width="300" src="img/value-container.jpg">
+            </p>
+          </section>
+
+          <section>
+            <h2>Syntax</h2>
+            <p>
+              To declare and initialize a variable, the following syntax is used:
+              <pre><code class="hljs">
+                // var name;
+                var x;
+
+                // name = value;
+                x = 5;
+              </code></pre>
+
+              Or all in one statement:
+              <pre><code class="hljs">
+                // var name = value;
+                var x = 5;
+              </code></pre>
+
+              Reasign a value (notice the <code>=</code> assignment operator):
+              <pre><code class="hljs">
+                var x = 5;
+                x = 1; 
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Primitive Data Types</h2>
+            <p>
+              <b>String:</b> Sequence of characters.
+              <pre><code class="hljs">
+                var greeting = 'Hello Diego';
+                var greatUniversity = "CENTRO";
+              </code></pre>
+
+              <b>Number:</b> Integers and floating point.
+              <pre><code class="hljs">
+                var myAge  = 5;
+                var myDebt = 9.10;
+              </code></pre>
+
+              <b>Boolean:</b> Represents logical values true or false.
+              <pre><code class="hljs">
+                var catsAreBest = true;
+                var isRaining   = false;
+              </code></pre>
+
+              <b>undefined:</b> Represents a value that hasn't been defined.
+              <pre><code class="hljs">
+                var absoluteTruth;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Weakly typed (loosely typed)</h2>
+            <p>
+              JS is a weakly typed language. It means that you should
+              not specify the data type when a variable is declared.<br>
+              JS figures out the type based on value, and the type can change.
+              <pre><code class="hljs">
+                var myName = 'Diego';
+                myName = 2;
+                myName = true;
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.5 JS: Comments</h2>
+            <p>
+              Comments are statements ignored by computer and is aimed to
+              human can understand not obvious code.
+              <pre><code class="hljs">
+                // Single line comments
+                var x = 4;
+
+                /* 
+                 Comments in multiple lines (for long descriptions)
+                */
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3.5 JS: Functions</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide',
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
