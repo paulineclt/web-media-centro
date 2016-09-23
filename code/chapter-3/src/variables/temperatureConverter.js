@@ -10,5 +10,5 @@ var tempCelsius = 10;
 
 var tempFarenheit = ((tempCelsius * 9) / 5) + 32;
 
-console.log('\n:::: Temperature Converter :::::')
+console.log('\n:::: Temperature Converter :::::');
 console.log('The temperature in Farenheit scale is: ' + tempFarenheit);
