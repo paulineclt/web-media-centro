@@ -41,5 +41,9 @@ graphic programs made with OpenGL) through WebGL.
 
 ## Chapter 3
 1. [ Javascript Variables ](http://archive.oreilly.com/pub/a/javascript/excerpts/learning-javascript/javascript-datatypes-variables.html)
-2. [ Control Flow Javascript ](http://eloquentjavascript.net/1st_edition/chapter2.html)
-3. [ JS Array references ](http://www.w3schools.com/jsref/jsref_obj_array.asp)
+2. [ Functions ](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
+3. [ JS Functions ](http://www.quirksmode.org/js/function.html) 
+4. [ Control Flow Javascript ](http://eloquentjavascript.net/1st_edition/chapter2.html)
+5. [ Operators and Expressions ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+6. [ JS Array references ](http://www.w3schools.com/jsref/jsref_obj_array.asp)
+7. [ Objects ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
