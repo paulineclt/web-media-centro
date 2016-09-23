@@ -307,7 +307,7 @@
 
         <section>
           <section>
-            <h2>3.5 JS: Functions</h2>
+            <h2>3.6 JS: Functions</h2>
             <p>
               Often we want to do a task several times, and is very annoying and
               confusing write the same piece of code repeatedly.<br><br>
@@ -438,7 +438,7 @@
 
         <section>
           <section>
-            <h2>3.6 JS: Flow control</h2>
+            <h2>3.7 JS: Flow control</h2>
             <p>
               The last code bender.
             </p>
@@ -688,7 +688,7 @@
 
         <section>
           <section>
-            <h2>3.7 JS: Arrays</h2>
+            <h2>3.8 JS: Arrays</h2>
             <p>
               For hold multiple values in one single variable we can use arrays.<br>
               An array is a type of data-type that holds an ordered list of values,
@@ -740,9 +740,142 @@
 
         <section>
           <section>
-            <h2>3.8 JS: Objects</h2>
+            <h2>3.9 JS: Objects</h2>
             <p>
+              One of the most abstract things of the modern code is the concept
+              of object-oriented programming. An object in programming language
+              can be compared to objects in real life.<br>
+              <img width="260" data-src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Mobile_phone_evolution.jpg"><br>
             </p>
+          </section>
+
+          <section>
+            <h2>Objects in JavaScript</h2>
+            <p>
+              JS is designed on a simple object-based paradigm.<br><br>
+              An JS object is a collection of properties, and a property is an
+              association between a name (or key) and a value.<br>
+              A property of an object can be seen as a variable attached to the
+              object.
+            </p>
+            <pre><code class="hljs">
+              var object = {};
+
+              var object = {
+                property1 : value1,
+                property2 : value2
+              };
+            </code></pre>
+            <pre><code class="hljs">
+              var aboutMe = {
+                hometown: 'CDMX, México',
+                hair: 'black',
+                wearGlasses: true,
+                birthday: { day: 2, month: 'September' }
+              };
+
+              var cat = {};
+              cat.furColor = 'orange';
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Access (dots and brackets)</h2>
+            <p>
+              Two ways to retrieve the values of an object: with dot and brackets.
+            </p>
+            <pre><code class="hljs">
+              var aboutMe = {
+                hometown: 'CDMX, México',
+                hair: 'black',
+                wearGlasses: true,
+                birthday: { day: 2, month: 'September' }
+              };
+
+              var myHometown = aboutMe.hometown;
+
+              var myHairColor = aboutMe['hair'];
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Changing (dots and brackets)</h2>
+            <pre><code class="hljs">
+              var aboutMe = {
+                hometown: 'CDMX, México',
+                hair: 'black',
+                wearGlasses: true,
+                birthday: { day: 2, month: 'September' }
+              };
+
+              aboutMe.wearGlasses = false;
+
+              // Add attributes
+              aboutMe.gender = 'male';
+
+              // Remove attributes
+              delete aboutMe.gender;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Array of objects</h2>
+            <pre><code class="hljs">
+              var myPets = [
+                {
+                  name: 'Lizzie',
+                  type: 'dog',
+                  bathDays: 0,
+                  age: 6
+                },
+                {
+                  name: 'Daemon',
+                  type: 'cat',
+                  age: 1
+                }
+              ];
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Object methods</h2>
+            <p>
+              Since we can put any type of data as a value of attribute, we can
+              put... FUNCTIONS!!!!!<br>
+              Object attributes that are functions are called methods.
+            </p>
+            <pre><code class="hljs">
+              var myCat = {
+                name: 'Daemon',
+                type: 'cat',
+                age: 1,
+                furColor: 'grey',
+                meow: function() {
+                  console.log('meowww');
+                },
+                sleep: function (numMinutes) {
+                  for (var i = 0; i < numMinutes; i++) {
+                    console.log('z');
+                  }
+                }
+              };
+
+              myCat.meow();
+              myCat.sleep(10);
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Object methods</h2>
+            <pre><code class="hljs">
+              myCat.eat = function (food) {
+                console.log('Yum, I love ' + food);
+              };
+            </code></pre>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/MMCl1fFmXUg" frameborder="0" allowfullscreen></iframe>
+            <pre><code class="hljs">
+              myCat.eat('Tia helen');
+            </code></pre>
           </section>
         </section>
       </div>
