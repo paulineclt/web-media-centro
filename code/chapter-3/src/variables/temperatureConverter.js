@@ -5,6 +5,7 @@
  * Store a temperature in Celsius scale.
  * Convert in Farenheit scale and show in console.
  */
+'use strict';
 
 var tempCelsius = 10;
 

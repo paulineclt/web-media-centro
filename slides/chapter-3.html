@@ -389,6 +389,10 @@
               It means that they are visible in the function where they're defined.<br><br>
               The parts of code where a variable is visible is called the "variable scope".
             </p>
+          </section>
+
+          <section>
+            <p>Local scope</p>
             <pre><code class="hljs">
               function addNumbers(num1, num2) {
                 var result = num1 + num2;
@@ -399,6 +403,7 @@
               console.log(result);
             </code></pre>
 
+            <p>Global scope</p>
             <pre><code class="hljs">
               var result;
               function addNumbers(num1, num2) {
@@ -464,7 +469,10 @@
                 // statements to execute
               }
             </code></pre>
+          </section>
 
+          <section>
+            <p>Example (if):</p>
             <pre><code class="hljs">
               var x = 5;
 
@@ -556,6 +564,9 @@
                 </tr>
               </tbody>
             </table>
+          </section>
+
+          <section>
             <p>
               Can combining together multiple conditions (be careful with the
               parenthesis):
@@ -766,6 +777,10 @@
                 property2 : value2
               };
             </code></pre>
+          </section>
+
+          <section>
+            <p>Example of objects</p>
             <pre><code class="hljs">
               var aboutMe = {
                 hometown: 'CDMX, México',

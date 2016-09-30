@@ -6,11 +6,12 @@
  * Store youe birth year in a variable.
  * Calculate their 2 possible ages based on the stored values and show in console.
  */
+'use strict';
 
 var birthYear   = 1999;
 var currentYear = 2016;
 
 var age = currentYear - birthYear;
 
-console.log('\n:::: Age calculator :::::')
+console.log('\n:::: Age calculator :::::');
 console.log('Your age is: ' + age + ', or: ' + (age - 1));

@@ -5,6 +5,7 @@
  * Store a radius in a variable.
  * Calculate the perimeter and area and show in console.
  */
+'use strict';
 
 var radius = 10;
 var diameter = radius * 2;
